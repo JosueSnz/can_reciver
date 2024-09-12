@@ -4,10 +4,20 @@
 #include <Arduino.h>
 #include <mcp_can.h>
 #include <SPI.h>
+#include "can.h"
 
-#define CAN0_INT 17                              
-MCP_CAN can(5);   
+CAN can(5); // verificar a pinagem
 
-#define LED 4
+float temperatura;
+float pressao;
+float atmosfera;
+float altitude;
+int potenciometro;
+uint32_t valor[5];
+
+int potValue = 0;
+#define LED 13
+int variacao = 0;
+int i = 0;
 
 #endif
